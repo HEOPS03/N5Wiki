@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Styles/style.css" />
+    <link href="test.html" rel="import" />
 </head>
 <body id="body">
     <div id="sideMenu">
@@ -43,8 +44,15 @@
     </div>
     </div>
     <div id="contentBox">
-        <div id="content" w3-include-html="test.html">
-            <!-- <div class="pageContent">
+        <div id="content">
+            <script>
+                var link = document.querySelector('link[rel=import]');
+                var content = link.import.querySelector('#testDiv');
+                document.body.appendChild(content.cloneNode(true));
+              </script>
+        </div>
+        <!-- <div id="content" w3-include-html="test.html">
+            <div class="pageContent">
                 <div class="pageBannerContent">
                     <img class="pageBanner" src="images/empty.jpg"/>
                 </div>
@@ -60,8 +68,8 @@
                         Сервер был основан 15 августа 2015 года и существует по сей день. Ну и дальше еще чо то про сервер написано.
                     </p>
                 </div>                              
-            </div> -->
-        </div>
+            </div>
+        </div> -->
         <div id="footer">
             <div id="footerContent">
                 <div id="community">
@@ -82,9 +90,9 @@
                     </dl>
                 </div>
             </div>
-        </div>
+    </div>
     </div>   
-    <script>
+    <!-- <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
           /* Цикл через коллекцию всех элементов HTML: */
@@ -115,5 +123,5 @@
         </script>
         <script>
             includeHTML();
-        </script>
+        </script> -->
 </body>
