@@ -44,14 +44,7 @@
     </div>
     </div>
     <div id="contentBox">
-        <div id="content">
-            <script>
-                var link = document.querySelector('link[rel=import]');
-                var content = link.import.querySelector('#testDiv');
-                document.body.appendChild(content.cloneNode(true));
-              </script>
-        </div>
-        <!-- <div id="content" w3-include-html="test.html">
+        <div id="content" w3-include-html="test.html">
             <div class="pageContent">
                 <div class="pageBannerContent">
                     <img class="pageBanner" src="images/empty.jpg"/>
@@ -69,7 +62,7 @@
                     </p>
                 </div>                              
             </div>
-        </div> -->
+        </div>
         <div id="footer">
             <div id="footerContent">
                 <div id="community">
@@ -92,7 +85,9 @@
             </div>
     </div>
     </div>   
-    <!-- <script>
+
+    
+    <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
           /* Цикл через коллекцию всех элементов HTML: */
@@ -123,5 +118,5 @@
         </script>
         <script>
             includeHTML();
-        </script> -->
+        </script>
 </body>
