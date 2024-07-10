@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Styles/style.css" />
-    <link href="test.html" rel="import" />
 </head>
 <body id="body">
     <div id="sideMenu">
@@ -15,30 +14,30 @@
             </div>
             <div id="sideMenuList">
             <dl>
-                <dt>Главная</dt>
+                <dt class="listItem" onclick="includeHTML('pages/mainPage.html')">Главная</dt>
                 <dt>
                     <details open>
                         
-                        <summary>Руководство</summary>
+                        <summary onclick="includeHTML('pages/guidePage.html')">Руководство</summary>
                             <dd>
                                 <details open>
                                     <summary>Режимы игры</summary>
-                                        <dd onclick="loadSnippet(1)">Выживание</dd>
-                                        <dd>Побег от зондри</dd>
+                                        <dd class="listItem">Выживание</dd>
+                                        <dd class="listItem">Побег от зондри</dd>
                                 </details>
                             </dd>
                             <dd>
                                 <details open>
                                     <summary>Рынок</summary>
-                                        <dd>Фракции</dd>
-                                        <dd>Перки</dd>
-                                        <dd>Объекты</dd>
-                                        <dd>Улучшения</dd>
-                                        <dd>Украшения</dd>
+                                        <dd class="listItem">Фракции</dd>
+                                        <dd class="listItem">Перки</dd>
+                                        <dd class="listItem">Объекты</dd>
+                                        <dd class="listItem">Улучшения</dd>
+                                        <dd class="listItem">Украшения</dd>
                                 </details>
                             </dd>
                     </details>
-                <dt>Донат</dt>
+                <dt class="listItem">Донат</dt>
             </dl>
         </div>
     </div>
@@ -88,7 +87,7 @@
 
 
     <script>
-        function includeHTML() {
+        function includeHTML(name) {
           var z, i, elmnt, file, xhttp;
           /* Цикл через коллекцию всех элементов HTML: */
           z = document.getElementsByTagName("*");
@@ -108,7 +107,7 @@
                   includeHTML();
                 }
               }
-              xhttp.open("GET", file, true);
+              xhttp.open("GET", name, true);
               xhttp.send();
               /* Выход из функции: */
               return;
